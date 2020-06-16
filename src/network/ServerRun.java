@@ -65,9 +65,6 @@ public class ServerRun implements Runnable{
             System.out.println("query accepted #" + ++clientCount);
 
             QueryHandler queryHandler = new QueryHandler(dbManager, userInterface, collection);
-//            ExecutorService executorService = Executors.newCachedThreadPool();
-//            executorService.submit(new QueryHandler(dbManager, userInterface, collection));
-            //executorService.shutdown();
             queryHandler.run();
 
 
